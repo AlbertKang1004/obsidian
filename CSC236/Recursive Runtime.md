@@ -120,7 +120,7 @@ T(1)=T_1, & n=1.
 $$
 
 
-Runtime tree
+Runtime tree![[Pasted image 20251114164744.png]]
 
 --------
 <span style="color:rgb(0, 176, 240)">"One-and-a-half" unrolling</span>
