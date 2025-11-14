@@ -149,8 +149,9 @@ Let $n\in\mathbb{N}$. Assume $n\geq\cancel{1}\cancel{2}4$.
 			- $2^{k+1}k<2n\mathrm{lg}\;n$
 			- $2^{k+1}(k+2)<2n(\mathrm{lg}\;n+2) \leq 2n(\mathrm{lg}\;n+\mathrm{lg}\;n)$(when $n\leq 4$)
 			- $\therefore T(n)\leq 4n\mathrm{lg}\;n$
-Combine both c, 
+Combine case 1 and 2, 
 - $\frac{1}{2}n\mathrm{lg}\;n \leq T(n)\leq 4n\mathrm{lg}\;n$
+- $\therefore T(n)$
 
 ----
 
