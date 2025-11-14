@@ -168,8 +168,8 @@ n + 4\cdot\,T\!\left(\dfrac{n}{2}\right), & n \ge 2,\\[6pt]
 1, & n=1.
 \end{cases}
 $$
-Here, $n$ is non-recursive time $\Theta (n)$.
-
+-  $n$ is non-recursive time $\Theta (n)$.
+- $4$ is number of recursive calls, with $\displaystyle T(\frac{n}{2})$ 
 
 Runtime tree
 
