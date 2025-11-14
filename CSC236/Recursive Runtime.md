@@ -64,15 +64,15 @@ $$
 
 ```python
 def MS(L):
-	n = len(L) # θ(1)
+	n = len(L) # Θ(1)
 	if n >= 2: # 
-		L0 = L[0:n//2] # θ(n)
+		L0 = L[0:n//2] # Θ(n)
 		L1 = L[n//2:n] #
 		MS(L0) # len(L0) = floor(n/2)
 		MS(L1) # len(L1) = ceil(n/2)
-		Merge(L, L0, L1) # θ(n)
+		Merge(L, L0, L1) # Θ(n)
 		# assuming a suitable helper Merge that merges L0 and L1 back into L
-		# t(n) = θ(1) + θ(n) + θ(n) = θ(n)
+		# t(n) = Θ(1) + Θ(n) + Θ(n) = Θ(n)
 ```
 
 ### Trace for `len(L) = 8`
@@ -130,7 +130,7 @@ n&=2^{k} \\[3pt]
 \end{align}$$
 (2) $\forall m\leq n,T(m)\leq T(n)$
 
-**WTP**: $T(n)\in\theta(n \mathrm{lg}\;n)$ from definition of $\theta$.
+**WTP**: $T(n)\in\Theta(n \mathrm{lg}\;n)$ from definition of $\Theta$.
 Let $n\in\mathbb{N}$. Assume $n\geq\cancel{1}\cancel{2}4$.
 - case 1: Assume $\exists k, n=2^k$.
 	- Then $T(n)=2^k(k+1)=n(\mathrm{\lg}\;n+1)$ (by (1))
