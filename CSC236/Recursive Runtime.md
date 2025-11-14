@@ -134,7 +134,7 @@ n&=2^{k} \\[3pt]
 Let $n\in\mathbb{N}$. Assume $n\geq1$.
 - case 1: assume $\exists k, n=2^k$.
 	Then $T(n)=2^k(k+1)=n(\mathrm{\lg}\;n+1)$ (by (1))
-		$\therefore T(n) \geq n\mathrm{lg}\;n$
+		-$\therefore T(n) \geq n\mathrm{lg}\;n$
 		$\therefore T(n) \leq n(\mathrm{lg}\;n+\mathrm{lg}\;n)$, as long as $\mathrm{lg}\;n \geq 1\equiv n\geq 2$
 - case 2: assume $n$ is **not** a power of $2$.
 	Then $\exists k\in\mathtt{N}, 2^k<n<2$.
@@ -147,6 +147,7 @@ Let $n\in\mathbb{N}$. Assume $n\geq1$.
 			also $\equiv 2^{k+1}<2n$
 			multiply both, we get
 			 $2^{k+1}(k+2)<2n(\mathrm{lg}\;n+2) \leq 2n(\mathrm{lg}\;n+\mathrm{lg}\;n)$ (when $n\leq 4$)
+			$\therefore T(n)\leq 4n\mathrm{lg}\;n$
 			
 
 ----
