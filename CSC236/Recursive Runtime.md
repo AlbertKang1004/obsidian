@@ -145,7 +145,8 @@ Let $n\in\mathbb{N}$. Assume $n\geq1$.
 			$\displaystyle\therefore \frac{1}{2}n\mathrm{lg}\;n\leq T(n)$
 			Ⓑ $2^k<n\equiv k<\mathrm{lg}\;n$
 			also $\equiv 2^{k+1}<2n$
-			multiply both, we get $2^{k+1}(k+2)<2n(\mathrm{lg}\;n)$
+			multiply both, we get $2^{k+1}(k+2)<2n(\mathrm{lg}\;n+2) \leq 2$
+			
 
 ----
 
