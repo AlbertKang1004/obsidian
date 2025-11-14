@@ -142,7 +142,7 @@ Let $n\in\mathbb{N}$. Assume $n\geq1$.
 			A. $n<2^{k+1}\equiv \frac{n}{2}<2^k$
 			also $\equiv \mathrm{lg}\;n\leq k+1$
 			multiply both, we get $\displaystyle\frac{1}{2}n\mathrm{lg}\;n<2^k(k+1)$.
-			$$
+			$\displaystyle\therefore \frac{1}{2}n\mathrm{lg}\;n\leq T(n)$
 			
 
 ----
