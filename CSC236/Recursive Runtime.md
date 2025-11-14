@@ -112,7 +112,7 @@ T(2^k)&=2^k+T\left( \left\lfloor  \frac{2^k}{2}  \right\rfloor  \right)+T\left( 
 &= \cdots \mathrm{when} \: i=k\cdots \\[3pt]
 &= 2^k(k+1)
 \end{align}$$
-$\therefore T(2^{k)}= 2^k(k+1)$.
+$\therefore T(2^{k)}= 2^k(k+1)$.![[Pasted image 20251114170814.png]]
 How about $T(n)$?
 
 ![[mergesort_runtime.png|500]]
