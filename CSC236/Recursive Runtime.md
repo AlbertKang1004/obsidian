@@ -83,6 +83,7 @@ $$\begin{align}
 T(8)&=1\cdot 8+2\cdot 4+4\cdot 2+8\cdot 1 \\[3pt]
 T(8)&=8\cdot 4=32
 \end{align}$$
+![[mergesort_runtime.png|500]]
 In mathematical notation:
 $$
 T(n)=
@@ -112,10 +113,30 @@ T(2^k)&=2^k+T\left( \left\lfloor  \frac{2^k}{2}  \right\rfloor  \right)+T\left( 
 &= \cdots \mathrm{when} \: i=k\cdots \\[3pt]
 &= 2^k(k+1)
 \end{align}$$
-$\therefore T(2^{k)}= 2^k(k+1)$.![[Pasted image 20251114170814.png]]
+$\therefore T(2^{k)}= 2^k(k+1)$.
+
 How about $T(n)$?
 
-![[mergesort_runtime.png|500]]
+![[mergesort_graph.png||300]]
+
+### Claim: T is non-decreasing. 
+>$(\forall m\leq n,T(m)\leq T(n))$, Can be proved by *induction*
+
+(1) $\forall k \in \mathbb{N}, T(2^{k)}= 2^k\cdot(k+1)$
+$$\begin{align}
+n&=2^{k} \\[3pt]
+\equiv \mathrm{lg}\; n&=k \\[3pt]
+ [\mathrm{lg}\ n&=\log_{2}n]
+\end{align}$$
+(2) $\forall m\leq n,T(m)\leq T(n)$
+
+**WTP**: $T(n)\in\theta(n \mathrm{lg}\;n)$ from definition of $\theta$.
+Let $n\in\mathbb{N}$. Assume $n\geq1$.
+- case 1: assume $\exists k, n=2^k$.
+	Then $T(n)=2^k(k+1)=n(\mathrm{\lg}\;n+1)$ (by (1))
+	 $\therefore T(n) \geq n\mathrm{lg}\;n$
+	 $\therefore T(n) \leq n(\mathrm{lg}\;n+\mathrm{lg}\;n)$, as long as $\mathrm{lg}\;n \geq 1\equiv n\geq 2$
+	 
 
 ----
 
