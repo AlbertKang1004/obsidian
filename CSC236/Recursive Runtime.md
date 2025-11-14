@@ -107,7 +107,8 @@ T(2^k)&=2^k+T\left( \left\lfloor  \frac{2^k}{2}  \right\rfloor  \right)+T\left( 
 &= 2^k+2(2^{k-1}+2\cdot T(2^{k-2})) \\[3pt]
 &= 2^k+2^k+2^2\cdot T(2^{k-2})
 \end{align}$$
-![[Pasted image 20251114164316.png]]
+
+![[mergesort_runtime.png|500]]
 ----
 
 Divide-and-conquer algorithm has simplified runtime recurrence
