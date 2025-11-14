@@ -137,7 +137,9 @@ Let $n\in\mathbb{N}$. Assume $n\geq1$.
 	 $\therefore T(n) \geq n\mathrm{lg}\;n$
 	 $\therefore T(n) \leq n(\mathrm{lg}\;n+\mathrm{lg}\;n)$, as long as $\mathrm{lg}\;n \geq 1\equiv n\geq 2$
 - case 2: assume $n$ is **not** a power of $2$.
-	Then $\exi$
+	Then $\exists k\in\mathtt{N}, 2^k<n<2$.
+		
+	
 
 ----
 
