@@ -151,8 +151,8 @@ Let $n\in\mathbb{N}$. Assume $n\geq\cancel{1}\cancel{2}4$.
 			- $\therefore T(n)\leq 4n\mathrm{lg}\;n$
 Combine case 1 and 2, 
 - $\frac{1}{2}n\mathrm{lg}\;n \leq T(n)\leq 4n\mathrm{lg}\;n$
-- $\therefore T(n)$
-
+- $\therefore T(n)\in \Theta(n\mathrm{lg}\;n)$
+Better way to do: 
 ----
 
 Divide-and-conquer algorithm has simplified runtime recurrence
