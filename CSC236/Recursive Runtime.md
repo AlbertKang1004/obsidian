@@ -155,7 +155,7 @@ Combine case 1 and 2,
 
 **Better solution**: Start with arbitrary $n\geq 4$ and the unique $k$ such that $2^{k}\leq n < 2^{k+1}$.
 
-## Example 3: 
+## Example 3: Divide-and-Conquer
 
 > Question: How much time does it take to multiply two **large** integers ($n$ digits each)?
 
