@@ -138,7 +138,7 @@ Let $n\in\mathbb{N}$. Assume $n\geq1$.
 	 $\therefore T(n) \leq n(\mathrm{lg}\;n+\mathrm{lg}\;n)$, as long as $\mathrm{lg}\;n \geq 1\equiv n\geq 2$
 - case 2: assume $n$ is **not** a power of $2$.
 	Then $\exists k\in\mathtt{N}, 2^k<n<2$.
-		$\therefore T(2^{k})\leq T(n)\leq T(2^{k+1})$ (by (2))
+		$\therefore 2^k(k+1)=T(2^{k})\leq T(n)\leq T(2^{k+1})=2^{k+1}(k+2)$ (by (2))
 	
 
 ----
