@@ -131,7 +131,7 @@ n&=2^{k} \\[3pt]
 (2) $\forall m\leq n,T(m)\leq T(n)$
 
 **WTP**: $T(n)\in\theta(n \mathrm{lg}\;n)$ from definition of $\theta$.
-Let $n\in\mathbb{N}$. Assume $n\geq\cross{1}$.
+Let $n\in\mathbb{N}$. Assume $n\geq\cancel{1}\cancel{2}4$.
 - case 1: assume $\exists k, n=2^k$.
 	- Then $T(n)=2^k(k+1)=n(\mathrm{\lg}\;n+1)$ (by (1))
 		- $\therefore T(n) \geq n\mathrm{lg}\;n$
