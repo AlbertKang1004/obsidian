@@ -76,6 +76,7 @@ def MS(L):
 ```
 
 ### Trace for `len(L) = 8`
+
 ![[mergesort_diagram.png|500]]
 ### Notes
 $$\begin{align}
@@ -121,7 +122,7 @@ T(1)=T_1, & n=1.
 $$
 
 
-Runtime tree![[Pasted image 20251114164744.png]]
+Runtime tree
 
 --------
 <span style="color:rgb(0, 176, 240)">"One-and-a-half" unrolling</span>
