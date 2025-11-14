@@ -136,7 +136,8 @@ Let $n\in\mathbb{N}$. Assume $n\geq1$.
 	Then $T(n)=2^k(k+1)=n(\mathrm{\lg}\;n+1)$ (by (1))
 	 $\therefore T(n) \geq n\mathrm{lg}\;n$
 	 $\therefore T(n) \leq n(\mathrm{lg}\;n+\mathrm{lg}\;n)$, as long as $\mathrm{lg}\;n \geq 1\equiv n\geq 2$
-	 
+- case 2: assume $n$ is **not** a power of $2$.
+	Then $\exi$
 
 ----
 
