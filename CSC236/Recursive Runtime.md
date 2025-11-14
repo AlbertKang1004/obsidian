@@ -132,11 +132,11 @@ n&=2^{k} \\[3pt]
 
 **WTP**: $T(n)\in\theta(n \mathrm{lg}\;n)$ from definition of $\theta$.
 Let $n\in\mathbb{N}$. Assume $n\geq\cancel{1}\cancel{2}4$.
-- case 1: assume $\exists k, n=2^k$.
+- case 1: Assume $\exists k, n=2^k$.
 	- Then $T(n)=2^k(k+1)=n(\mathrm{\lg}\;n+1)$ (by (1))
 		- $\therefore T(n) \geq n\mathrm{lg}\;n$
 		- $\therefore T(n) \leq n(\mathrm{lg}\;n+\mathrm{lg}\;n)$, as long as $\mathrm{lg}\;n \geq 1\equiv n\geq 2$
-- case 2: assume $n$ is **not** a power of $2$.
+- case 2: Assume $n$ is **not** a power of $2$.
 	- Then $\exists k\in\mathtt{N}, 2^k<n<2$.
 	- $\therefore  Ⓐ\;2^k(k+1)=T(2^{k})\leq T(n)\leq T(2^{k+1})=Ⓑ\;2^{k+1}(k+2)$ (by (2))
 		- Ⓐ $n<2^{k+1}\equiv \frac{n}{2}<2^k$
