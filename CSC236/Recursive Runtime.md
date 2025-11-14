@@ -78,7 +78,7 @@ def MS(L):
 ### Trace for `len(L) = 8`
 
 ![[mergesort_diagram.png|500]]
-### Notes
+### Analysis
 $$\begin{align}
 T(8)&=1\cdot 8+2\cdot 4+4\cdot 2+8\cdot 1 \\[3pt]
 T(8)&=8\cdot 4=32
@@ -106,10 +106,17 @@ $$\begin{align}
 T(2^k)&=2^k+T\left( \left\lfloor  \frac{2^k}{2}  \right\rfloor  \right)+T\left( \left\lceil  \frac{2^k}{2}  \right\rceil  \right) \\[3pt]
 &=2^{k}+2\cdot T(2^{k-1}) \\[3pt]
 &= 2^k+2(2^{k-1}+2\cdot T(2^{k-2})) \\[3pt]
-&= 2^k+2^k+2^2\cdot T(2^{k-2})
+&= 2^k+2^k+2^2\cdot T(2^{k-2}) \\[3pt]
+&=\cdots \mathrm{after \: \textit{i}\: substitutions}\cdots\\[3pt]
+&=i\cdot2^k+2^{i}\cdot T(2^{k-i}) \\[3pt]
+&= \cdots \mathrm{when} \: i=k\cdots \\[3pt]
+&= 2^k(k+1)
 \end{align}$$
+$\therefore T(2^{k)}= 2^k(k+1)$.
+How about $T(n)$?
 
 ![[mergesort_runtime.png|500]]
+
 ----
 
 Divide-and-conquer algorithm has simplified runtime recurrence
