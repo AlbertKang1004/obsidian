@@ -122,7 +122,7 @@ How about $T(n)$?
 ### Claim: T is non-decreasing. 
 >$(\forall m\leq n,T(m)\leq T(n))$, Can be proved by *induction*
 
-(1) $\forall k \in \mathbb{N}, T(2^{k)}= 2^k\cdot(k+1)$
+(1) $\forall k \in \mathbb{N}, T(2^{k})= 2^k\cdot(k+1)$
 $$\begin{align}
 n&=2^{k} \\[3pt]
 \equiv \mathrm{lg}\; n&=k \\[3pt]
