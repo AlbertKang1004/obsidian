@@ -77,7 +77,7 @@ def MS(L):
 
 ### Trace for `len(L) = 8`
 
-
+![[Pasted image 20251114161008.png]]
 
 
 
