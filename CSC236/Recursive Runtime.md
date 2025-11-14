@@ -6,7 +6,6 @@ def fact(n):
 	else: return n * fact(n-1)
 	# runtime inside is θ(1)
 ```
-
 ### Call Tree
 
 |   Call    | Steps per node |
@@ -65,20 +64,51 @@ $$
 
 ```python
 def MS(L):
-	n = len(L)
-	if n >= 2:
-		L0 = L[0:n//2]
-		L1 = L[n//2:n]
-		MS(L0)
-		MS(L1)
-		Merge(L, L0, L1)
+	n = len(L) # θ(1)
+	if n >= 2: # 
+		L0 = L[0:n//2] # θ(n)
+		L1 = L[n//2:n] #
+		MS(L0) # len(L0) = floor(n/2)
+		MS(L1) # len(L1) = ceil(n/2)
+		Merge(L, L0, L1) # θ(n)
 		# assuming a suitable helper Merge that merges L0 and L1 back into L
+		# t(n) = θ(1) + θ(n) + θ(n) = θ(n)
 ```
 
 ### Trace for `len(L) = 8`
-![[Pasted image 20251114161400.png]]
+![[mergesort_diagram.png|500]]
+### Notes
+$$\begin{align}
+T(8)&=1\cdot 8+2\cdot 4+4\cdot 2+8\cdot 1 \\[3pt]
+T(8)&=8\cdot 4=32
+\end{align}$$
+In mathematical notation:
+$$
+T(n)=
+\begin{cases}
+1, & n=0,1\\[6pt]
+n+T\left( \left\lfloor   \frac{n}{2} \right\rfloor   \right)+T\left( \left\lceil  \frac{n}{2}  \right\rceil  \right), & n\geq 2.
+\end{cases}
+$$
+Unroll (top - down):
+$$
+\begin{align}
+T(n)&=n+T\left( \left\lfloor   \frac{n}{2} \right\rfloor   \right)+T\left( \left\lceil  \frac{n}{2}  \right\rceil  \right) \\[3pt]
+&=n+\left( \left\lfloor  \frac{n}{2}  \right\rfloor T\left( \left\lfloor  \left\lfloor  \frac{n}{2}  \right\rfloor /2  \right\rfloor  \right) +T\left( \left\lceil  \left\lfloor  \frac{n}{2}  \right\rfloor /2  \right\rceil  \right)\right) \\[3pt]
+&= \cdots
+\end{align}
 
+$$
+However, this is not clean.
+Start from Picking $n=2^k$.
+$$\begin{align}
+T(2^k)&=2^k+T\left( \left\lfloor  \frac{2^k}{2}  \right\rfloor  \right)+T\left( \left\lceil  \frac{2^k}{2}  \right\rceil  \right) \\[3pt]
+&=2^{k}+2\cdot T(2^{k-1}) \\[3pt]
+&= 2^k+2(2^{k-1}+2\cdot T(2^{k-2})) \\[3pt]
+&= 2^k+2^k+2^2\cdot T(2^{k-2})
+\end{align}$$
 
+----
 
 Divide-and-conquer algorithm has simplified runtime recurrence
 $$
