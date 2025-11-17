@@ -77,13 +77,13 @@ def MS(L):
 
 ### Trace for `len(L) = 8`
 
-![[mergesort_diagram.png|500]]
+![[mergesort_diagram]]
 ### Analysis
 $$\begin{align}
 T(8)&=1\cdot 8+2\cdot 4+4\cdot 2+8\cdot 1 \\[3pt]
 T(8)&=8\cdot 4=32
 \end{align}$$
-![[mergesort_runtime.png|500]]
+![[mergesort_runtime]]
 In mathematical notation:
 $$
 T(n)=
@@ -117,7 +117,7 @@ $\therefore T(2^{k)}= 2^k(k+1)$.
 
 How about $T(n)$?
 
-![[mergesort_graph.png||300]]
+![[mergesort_graph]]
 
 ### Claim: T is non-decreasing. 
 >$(\forall m\leq n,T(m)\leq T(n))$, Can be proved by *induction*
@@ -187,4 +187,4 @@ Here, last term $=4^k=$ \# of leaves
 |                              |                        |                  |
  $\therefore T(n)\in \theta(\mathrm{last\ term})$
  
- 
+ ## 
