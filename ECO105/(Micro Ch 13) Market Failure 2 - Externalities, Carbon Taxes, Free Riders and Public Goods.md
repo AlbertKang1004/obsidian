@@ -53,7 +53,7 @@ $$\begin{align}
 
 
 - Between first column and second column, we have inverse relationship just like price/quantity curve.
-- Last column represents Marginal Social Cost (MSC), where it is 30$ higher than the MC. 
+- Last column represents **Marginal Social Cost** (MSC), where it is 30$ higher than the MC. 
 ![[Figure 13.1]]
 ## Policies to Internalize Negative Externalities
 > Without property rights to the environment, businesses have incentives to save money and improve profits by ignoring external costs like pollution and global warming.
@@ -64,10 +64,11 @@ Governments can remedy market failures from externalities by creating social pro
 	- Smart carbon tax = marginal external cost of damage from emissions
 - **Internalize the externality** — transform external costs into costs the producer must pay to the government
 ![[Figure 13.2]]
-- **Cap-and-Trade System** — limits quantities of emissions business can release into environment
-	- Government auctions off pollution permits to highest bidders
-	- Total quantity of emissions allowed by permits = emissions target
-	- Businesses buy and sell emissions permits
+### Cap-and-Trade System 
+Limits quantities of emissions business can release into environment
+- Government auctions off pollution permits to highest bidders
+- Total quantity of emissions allowed by permits = emissions target
+- Businesses buy and sell emissions permits
 ## Free Riders and Public Goods
 - **Public Goods** — provide external benefits consumed simultaneously by everyone
 	- No one can be excluded
@@ -78,7 +79,7 @@ Governments can remedy market failures from externalities by creating social pro
 		- No single price can coordinate smart individual choices and smart social choices
 		- Market-clearing price is too high for buyers to be willing to pay and too low for sellers to be willing to supply
 
-![[Figure 13.3.png|400]]
+![[Figure 13.3]]
 
 ## Subsidies for the Public Good
 > When there are positive externalities, government subsidies can get everyone to voluntarily choose the socially best quantity of output where **marginal social benefit** equals **marginal social cost**.
@@ -89,5 +90,5 @@ Governments can remedy market failures from externalities by creating social pro
 	- Subsidies to either suppliers or demanders can achieve an efficient social outcome
 - **Public Provision** (공공 제공) — government provision of products or services with positive externalities, financed by tax revenue
 
-![[Figure 13.4.png|400]]
+![[Figure 13.4]]
 	
