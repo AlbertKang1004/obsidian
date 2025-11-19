@@ -171,20 +171,79 @@ $$
 -  $n$ is non-recursive time $\Theta (n)$.
 - $4$ is number of recursive calls, with $\displaystyle\frac{n}{2}$ input size for each recursive call 
 
-Runtime tree
+### Runtime tree for $n=2^k$
+![[Runtime Tree]]
+$$T(n) = \underbrace{2^{k}\cdot4^0}_{n}+\dots+2^0\cdot 4^k$$
+"One-and-a-half" unrolling
+$$\begin{align}
+T(n) &= n+4\cdot T\left( \frac{n}{2} \right) \\[3pt]
+&= n+4\left( \frac{n}{2}+\cdots \right) \\[3pt]
+&= n+\frac{4}{2}n+\cdots  \\[3pt]
 
---------
-<span style="color:rgb(0, 176, 240)">"One-and-a-half" unrolling</span>
+\end{align} $$
+
+$T(n)$ is **geometric**, with ratio $\displaystyle\frac{4}{2}=2$.
+$\therefore T(n)\in \Theta (\text{last term})$
+$\because \text{ratio}>1$
 Here, last term $=4^k=$ \# of leaves
 
-|             size             |        # nodes         |      times       |
-| :--------------------------: | :--------------------: | :--------------: |
-| $2\cdot2\cdots2\cdot2\cdot2$ |          $4$           |       $1$        |
-|    $2\cdot2\cdots2\cdot2$    |       $4\cdot4$        |       $4$        |
-|           $\vdots$           |        $\vdots$        |     $\vdots$     |
-|             $2$              |    $4\cdots4\cdot4$    |    $4\cdots4$    |
-|             $1$              | $4\cdots4\cdot4\cdot4$ | $4\cdots4\cdot4$ |
-|                              |                        |                  |
- $\therefore T(n)\in \theta(\mathrm{last\ term})$
- 
- ## 
+|             size             |        # nodes         |              time               |
+| :--------------------------: | :--------------------: | :-----------------------------: |
+| $2\cdot2\cdots2\cdot2\cdot2$ |          $4$           |  $2\cdot2\cdots2\cdot2\cdot2$   |
+|    $2\cdot2\cdots2\cdot2$    |       $4\cdot4$        |  $2\cdot2\cdots2\cdot2\cdot4$   |
+|           $\vdots$           |        $\vdots$        |            $\vdots$             |
+|             $2$              |    $4\cdots4\cdot4$    | $2\cdot 4\cdots 4\cdot 4\cdot4$ |
+|             $1$              | $4\cdots4\cdot4\cdot4$ | $4\cdot 4\cdots 4\cdot 4\cdot4$ |
+$$\begin{align}
+2^{k} & \to \;4^k \\[3pt]
+n& \to\; ? \\[3pt]
+(2^k) ^{\log_{2}4}& =4 \\[3pt]
+n^{\log_{2}4} &= n^2 \\[3pt]
+\text{\# of leaves} &= n^{\log_{2}4} 
+\end{align}$$
+$\therefore T(n)\in \Theta (\text{last term})$
+
+----
+### Karatsuba's Algorithm
+Karatsuba's algorithm has runtime recurrence
+$$T(n)=\displaystyle\begin{cases}\displaystyle
+n+3T\left( \frac{n}{2} \right), &n\geq 2 \\[6pt]
+1, &n=1
+\end{cases}$$
+$$\begin{align}
+\therefore T(n)&\in \Theta(\text{last term}) \\[3pt]
+&=\Theta (\text{\# of leaves})
+\end{align}$$
+$$\begin{align}\displaystyle
+2\cdot 2 \cdots  2\longrightarrow 3\cdot 3\cdots 3 \\[3pt]
+\text{input size }n\longrightarrow \underbrace{n^{\log_{2}3} \text{ leaves} }_{T(n)\in \Theta(n^{\log_{2}3})}
+\end{align}$$
+As $2^{\log_{2}3} =3$. ($1< \log_{2}{3}<2$)
+### [[Recursive Runtime#Example 2 Merge Sort|Merge Sort]] Revisited
+$$\begin{align}
+T(n)&=n+2T\left( \frac{n}{2}\right) \\[3pt]
+&= n+\frac{2}{2}n+\cdots \\[3pt]
+&= n+n+\cdots 
+\end{align}$$
+- ratio = $1$
+- all terms contribute $T(n) \in \Theta(n\log n)$
+	- $n$ is one term in the sum
+	- $\log n$ is number of levels
+
+**Generally**:
+$$
+T(n)=\begin{cases}\displaystyle
+n^{d}+aT(\frac{n}{b}), &n>1 \\[6pt]
+1, &n=1
+\end{cases}
+$$
+$$\begin{align}
+T(n) &= n^d+aT\left( \frac{n}{b} \right) \\[3pt]
+&= n^d+a\left( \left( \frac{n}{b} \right)^d+aT\left( \frac{n}{b^2} \right) \right) \\[3pt]
+&= n^d+\frac{a}{b^d}n^{d}+\cdots
+\end{align}$$
+- ratio = $\displaystyle \frac{a}{b^d}$
+	- $a>b^{d}:\text{ratio}> 1$
+	- $\therefore T(n)\in \Theta(\text{last term})$
+
+![[MergeSort Generalized]]

@@ -80,7 +80,6 @@ Limits quantities of emissions business can release into environment
 		- Market-clearing price is too high for buyers to be willing to pay and too low for sellers to be willing to supply
 
 ![[Figure 13.3]]
-
 ## Subsidies for the Public Good
 > When there are positive externalities, government subsidies can get everyone to voluntarily choose the socially best quantity of output where **marginal social benefit** equals **marginal social cost**.
 
