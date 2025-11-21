@@ -1,3 +1,7 @@
+---
+share_link: https://share.note.sx/1gf01uai#dhdFmI/QiFIpMZTC/qq+Gu2YImj3hYtkc57NJzltN3k
+share_updated: 2025-11-19T21:05:22-05:00
+---
 ## Example 1: Factorial
 
 ```python
