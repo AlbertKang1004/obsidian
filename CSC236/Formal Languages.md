@@ -107,3 +107,67 @@ $\therefore$ in $q_{1}$, reading $b$ needs new state
 
 ![[DFA 3]]
 $\therefore a, aba$ are indistinguishable
+
+## Distinguishability
+$$L_{2} = \{s \in \{a,b\}^{*}: \text{2nd-last char of } s=a\}$$
+> $ba, bb$ are **distinguishable** with respect to $L_{2}$ :
+- $\exists$ suffix $a \in \{a, b\}^{*}$ s.t.
+	- $ba \cdot a = baa \in L_{2}$
+	- $bb\cdot a = bba \notin L_{2}$
+>$a, ba$ are **indistinguishable** with respect to $L_{2}$ :
+- $\forall$ suffixes $s \in \{a,b\}^*$,
+	-  $a\cdot s, ba \cdot s$ are both in $L_{2}$, or both not in $L_{2}$
+	- $\forall s \in \{a, b\}^{*},as \in L_{2} \iff bas \in L_{2}$
+	- Let $s \in \{a,b\}^*$.
+	- case $|s|\geq 2$ (e.g. $s=ababb$)
+		- then 2nd-last char of $a \cdot s$
+		- 2nd-last char of $ba \cdot s$
+		- are both = 2nd-last char of s
+		- (e.g. $aababb, baababb$)
+	- case $|s|<2$:
+		-  $a \cdot \varepsilon$, $ba \cdot \varepsilon\notin L_{2}$ 
+		-   $a \cdot a$, $ba \cdot a\in L_{2}$ 
+		-   $a \cdot b$, $ba \cdot b\in L_{2}$ 
+----
+> **Definition**: A set of strings $S \subseteq \Sigma^*$
+
+($S=\{s_{1}, s_{2}, \cdots\}$) is **pairwise distinguishable** with respect to $L$ iff $\forall i \neq j, s_{i} , s_{j}$ are distinguishable w.r.t. $L$.
+- Example: $\{ba,bb\}$ is pairwise distinguishable w.r.t. $L_{2}$.
+- $\{ba,bb,aa\}$ is pairwise distinguishable w.r.t. $L_{2}$.
+- Is $aa,ba$ distinguishable? Yes: suffix = $\varepsilon$
+	- ($aa\in L_{2}, ba \notin L_{2}$)
+- same for $aa, bb$
+
+> **Claim**: Every DFA for $L_{2}$ must have at least 3 states.
+
+***Proof.***
+Pick 2 strings 
+$s_{1} \in \{aa,ba,bb\}, \quad s_{2} =\{aa,ba,bb\}, \quad s_{1}\neq s_{2}$
+$s_{1}, s_{2}$ are distinguishable. Let $t$ witness this:
+- $s_{1}t \in L_{2},$
+- $s_{2}t \notin L_{2}$ (or other way around)
+In DFA, 
+	- $s_{1}t$ ends in **accepting** state
+	- $s_{2}t$ ends in **rejecting** state
+	- $\therefore s_{1}, s_{2}$ must end at different states.
+- $\therefore$ each DFA for $L_{2}$ needs at least as many states as there are strings in $\{aa,ba,bb\}$.
+- Here, largest set of pairwise distinguishable strings is $\{aa,ab,ba,bb\}$.
+---
+### Myhill-Nerode Theorem (Simplified)
+> For each language $L$, each set of pairwise distinguishable strings w.r.t. $L,$
+> every DFA for $L$ has at least $|s|$ many states.
+
+----
+## Nondeterministic Finite Automata (NFA)
+> **Idea**: NFA is allowed to be in any number (or any subset) of its states, at any point during its computation.
+
+**Why?**
+Easier to represent languages of `regular expressions`.
+**Example**
+$$(a+b)^{*}a(a+b)$$
+![[DFA 4]]
+deterministic: $\delta(r_{0}, b) = \{r_{0}\}$
+non-deterministic:
+- $\delta (r_{0},a) = {r_{0},r_{1}}$
+- $\delta(r_{2}, a)=\{\}$
+**Trace**
