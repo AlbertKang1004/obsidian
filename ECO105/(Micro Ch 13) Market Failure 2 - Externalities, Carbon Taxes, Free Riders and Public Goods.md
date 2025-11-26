@@ -1,7 +1,3 @@
----
-share_link: https://share.note.sx/eac79sl0#FbISKaf9MX4twq3HJnEV+yU7B5S4hyh+n2z1LkTmmnw
-share_updated: 2025-11-19T21:31:12-05:00
----
 ## Market Failure with Externalities
 > When externalities exist, prices don't reflect all social cost and benefits.
 > Markets fail to coordinate private smart choices with social smart choices.
