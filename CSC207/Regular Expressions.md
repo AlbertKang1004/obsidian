@@ -1,0 +1,54 @@
+
+
+
+| Regular Expression                  | Strings that conform    |
+| ----------------------------------- | ----------------------- |
+| `[abc]`                             | a, b, c                 |
+| `[abc]*`                            | "", aa, b, ab, abcacbaa |
+| `^[a-z][a-zA-Z0-9]*$`               | csc207, albertKang11    |
+| `[A-Z][0-9]+[A-Z]?`                 | A1,  A, Z9              |
+| `[A-Z][a-z]*[0-9]+`                 | Hello123                |
+| `([a-z]N[0-9]){3}`                  | bN3aN1kN9               |
+| `(\d\d)([A-Z]([a-z]))\1\3(\d){3}\2` | 23Am23m987Am            |
+|                                     |                         |
+- `[a-z]` Any **lowercase** character
+- `[A-Z]` Any **uppercase** character
+- `[0-9]` Any **digit** character
+
+- `*` **Zero** or **more** occurrence
+- `?` **Zero** or **one** occurrence
+- `+` **One** or **more** occurrence
+- `{n}` exactly **n** occurrence
+
+- `^` At the **start** of the string
+- `$` At the **end** of the string
+
+- `\d` Matches **digits**
+- `\w` Matches **word characters** (alphabet + digit)
+- `\s` Matches **any whitespace character**
+- `\t` Matches a **tab character**
+- `\n` Matches a **new line character**
+
+- `.` Matches **everything**
+- `[^abc]` Matches everything except a, b, and c
+
+- `\1` repeat **grouping number 1**, it has to match the previous substring
+	- grouping count from opening braces `(`
+
+- `|` Means **OR**
+- `&&` Means **AND**
+## Question
+Which of these would require the least amount of code to check if a single String conforms to a series of three regular expressions?
+1. Use the `Pattern` and `Matcher` classes as follows
+   ```java
+   Pattern p = Pattern.compile("a*b");
+   Matcher m = p.matcher("aaaab");
+   boolean b = m.matches();
+   ```
+2. Use `Matcher.find` and `Matcher.group`
+3. Use the `matcher` method from the` String` class
+4. The above methods cannot be used to check if a single `String` conforms to a series of regular expressions.
+**Answer** : 3
+
+> In Java, instead of `\` we have to use `\\` **(very important)**
+

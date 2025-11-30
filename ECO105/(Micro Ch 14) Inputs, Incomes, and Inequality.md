@@ -87,3 +87,61 @@ $$
 Another example inputs in relatively inelastic supply is **superstar talent**.
 - The reason that people are willing to pay start athletes incredible amounts of money is because fans are willing to pay a lot of money to see talent, and that talent is in relatively inelastic supply.
 ## Inequality and Poverty
+- "What are you worth?" is a positive question; depends on the quantities of inputs you own and prices markets place on those inputs
+- "What *should* you, or any person, be worth?" is a normative question you must answer as a citizen
+- Poverty results from not owning labour skills or assets that the market values, or from not getting a high enough price for what you do own
+- Policy options to reduce inequality and poverty
+	- Education, training
+	- Progressive tax and transfer system 
+- Improving **human capital** through education and training addresses underlying cause of poverty — lack of inputs the market values
+	- **Human capital** — increased earning potential from work experience, on-the-job training, education
+### Lifetime Earnings Premiums Relative to High School Education
+
+| Education                           | Lifetime Earnings Difference<br>Relative to High School Graduate |
+| ----------------------------------- | :--------------------------------------------------------------: |
+| Less Than High School               |                            -$320,720                             |
+| High School                         |                               ____                               |
+| Trades or Apprentices               |                             $505,360                             |
+| College                             |                             $489,680                             |
+| University below Bachelor Degree    |                             $605,600                             |
+| University Bachelor Degree or above |                            $1,376,000                            |
+### Types of Government Policies to improve Income Inequality
+- Federal and provincial tax systems use **progressive taxes** — the tax rate increases as income increases
+- **Regressive taxes** — the tax rate decreases as income increases
+- **Proportional (flat-rate) taxes** — the tax rate is the same regardless of income
+- **Marginal Tax rate** — rate on additional dollar of income
+- **Transfer payments**: payments by government to households
+
+However, redistribution may come with *side effects*:
+- Due to incentive effects, "A more equally shared pie may be smaller pie"
+- An **efficient market outcome** is not necessarily fair or equitable
+	- May include poor people unable to pay for basic necessities like housing, food, medical care
+- Governments can reduce poverty and inequality using tax-and-transfer systems to take from the rich and give to the poor (like Robin Hood)
+	- Costs and benefits of policies to help the poor apply to different people
+	- How you feel about Robin Hood's motto depends on whether you are being taken from or given to
+
+- Equity and efficiency usually viewed as trade-off
+- Heckman's research shows that investing in **Early Childhood Education** is a policy that promotes both equity and efficiency
+	- Inequality in early childhood produces inequality in ability, achievement, health, adult success
+	- Combination of educational and social skills (attentiveness, perseverance, impulse control, sociability) determines success in white collar jobs
+	- Students with GED certificate (test equivalent of high school diploma) don't succeed as well as high school graduates due to weaker social skills
+- Adverse impacts of genetic, parental, environmental resources can be overturned through human capital investments in ECE
+	- Investment in ECE for disadvantaged children from birth to 5 years:
+		- reduces achievement gap
+		- reduces need for special education
+		- increases likelihood of healthier lifestyles
+		- lowers crime rate
+		- reduces overall social costs
+	- Investment in ECE yields 7-10% per year return
+	
+### The Politics of Equity
+ - Politicians on **Left** (e.g., NDP)
+	 - Equity (of outcomes) priority over efficiency
+	 - Poverty & inequality as market failures
+	 - Unequal opportunities due to birth, family, income, inherited wealth
+	 - Redistribution of incomes towards equality by progressive taxation
+ - Politicians on **Right** (e.g., Conservatives)
+	 - Efficiency priority over equal outcomes
+	 - Efficiency creates prosperity that helps all
+	 - Unequal outcomes a fair result of personal differences
+	 - Poverty & inequality not systemic market failure; personal charity response for personal misfortune
