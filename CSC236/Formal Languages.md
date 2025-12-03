@@ -43,8 +43,8 @@ $$
 &= {\text{all strings that match the pattern}} \\[3pt]
 &= {\varepsilon, bb, bbbb, bbbbbb, \dots}
 \end{align}
-
 $$
+
 - "ends with ..." ?
 	- $\underline{(a+b)^*a}(bb) ^*$
 	- **underlined part** : does not end with b!
@@ -52,7 +52,6 @@ $$
 $$\begin{align}
 &\mathcal{L}\,((a,b)) = \{a,b\} \\[3pt]
 &\mathcal{L} \,((a, b)^{*})=\{a,b\}^* 
-
 \end{align}$$
 Q: $(a+b)^*a^*(bb)^*$
 False, as $b\varepsilon bb=bbb$
@@ -94,7 +93,7 @@ b&: b \cdot a, b \cdot b, b \cdot aa, \cdots
 \end{align}$$
 > $\varepsilon \cdot s$, $b \cdot s$ are both in $L_{2}$ or not in $L_{2}$, so they are **indistinguishable** with respect to $L_{2}$.
 
-Which means $\varepsilon$ and $b$ will end up in same state.
+Which means $\varepsilon$ and $b$ will end up in the same state.
 - First DFA is correct.
 - Third DFA can work, but it will require more states then required.
 
@@ -256,3 +255,69 @@ Let $\displaystyle a^{2^{m}}, a^{2^{n}}$ with $m\neq n$.
 - $\displaystyle a^{2^{n}}a^{2^{n}}=a^{(2^{n} +2^{n)}}=a^{2^{n+1}} \in L_{2}$
 -  $\displaystyle a^{2^{m}}a^{2^{n}}=a^{(2^{m} +2^{n)}}=a^{2^{n+1}} \not\in L_{2}$
 	- $\because 2^{m}+ 2^{n}$ is **not** a power of 2 when $n\neq m$.
+
+## Other Properties of DFA/NFA/RE
+$$\begin{align}
+L_{a} &= \{s \in \{a, b\}^{*}: s \text{ ends with an }'a'\} \\[3pt]
+L_{e} &= \{s \in \{a, b\}^{*}: s \text{ has an even \# of b's}\} 
+\end{align}$$
+- $L_{a}$ is **regular**.
+	- $\displaystyle\because L_{a}=\mathcal{L}\big((a+b)^{*}a\big)$
+	- ![[DFA 6|300]]
+	- $\overline{L_{a}} = \{a,b\}^{*}-L_{a}$
+### Complement
+>Is there a **RE** for $\overline{L_{a}}$?
+- **Claim**: $\overline{L_{a}}$ is also **regular**.
+	![[DFA 7|250]]
+- This generalizes that $\overline{L_{a}}$ always have the corresponding **DFA** .
+### Union
+> If $L_{1}$ and $L_{2}$ are **regular**, is $L_{1} \cup L_{2}$ **regular**?
+- $L_{1}=\mathcal{L}(R_{1})$, $L_{2}=\mathcal{L}(R_{2})$
+- $L_{1} \cup L_{2}=\mathcal{L}(R_{1}+R_{2})$
+- Therefore, $L_{1} \cup L_{2}$ is **regular**.
+### Intersection
+> If $L_{1}$ and $L_{2}$ are **regular**, is $L_{1} \cap L_{2}$ **regular**?
+
+Example : **DFA**  for $L_{a} \cap L_{e}$, take **DFA** s $A_{a}, A_{e}$.
+Remind: $$\begin{align}
+L_{a} &= \{s \in \{a, b\}^{*}: s \text{ ends with an }'a'\} \\[3pt]
+L_{e} &= \{s \in \{a, b\}^{*}: s \text{ has an even \# of b's}\} 
+\end{align}$$
+![[DFA 8]]
+#### Product Construction $A_{a} \times A_{e}$
+![[DFA 9]]
+Also, note that $L_{1} \cap L_{2} = \overline{L_{1}} \cup \overline{L_{2}}$.
+### NFA to DFA
+![[DFA 10]]
+- Create a DFA with **one state for each set** of states of the NFA.
+	- $q_{0}:\{r_{0}\}$
+	- $q_{1}:\{r_{0}, r_{1}\}$
+	- $q_{2}: \{r_{0}, r_{2}\}$
+	- $q_{3}: \{r_{0}, r_{1}, r_{2}\}$
+![[DFA 11|500]]
+- This is called **Subset Construction**
+	- It demonstrates that every **NFA**  can be converted into **DFA** .
+### RE to NFA
+There are three basic expressions: 
+![[NFA 1]]
+- $\varnothing$ : No matter what string is being read, it is **no state** at all. 
+	- (which does not contain accepting state)
+- $\varepsilon$ : Starts in one accepting state, if there's any character then it will not accept.
+---
+#### Union
+> Let $R_{1}$ has NFA $A_{1}$, $R_{2}$ has NFA $A_{2}$.
+
+Then $R_{1} + R_{2}$ is  NFA $A_{1}A_{2}$.
+Visually, 
+![[NFA 2]]
+#### Concatenation
+> $R_{1}R_{2}$
+- Initial states: those of $A_{1}$
+- Accepting states: those of $A_{2}$
+- Each transition into an old accepting state of $A_{1}$ is duplicated into each old start states of $A_{2}$
+Example: $a(a+b)$
+![[NFA 3|500]]
+#### Kleene Star (\*)
+> $R_{1}^*$
+
+![[NFA 4]]
