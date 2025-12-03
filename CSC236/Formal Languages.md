@@ -1,5 +1,5 @@
 \[= Sets of `string`s\]
-### Example 1: L-R Game
+### Example: L-R Game
 
 $$
 \text{language} = \{s\in\{a, b\}^{*}: s\text{ ends with an even \# of } b\text{'s} \}
@@ -184,11 +184,75 @@ non-deterministic:
 
 ---
 ## DFA vs. NFA vs. RE?
-- **DFA**  $= (\Sigma, Q, q_{\text{start}}, F, \delta)$
-	-  $\Sigma$ is a set of **alphabet**
-	- $Q$ is a set of **states**
-	- $q_{\text{start}} \in Q$ is a **starting** **state**
-	- $F \subseteq Q$ is a set of **accepting** **states**
-	- $\delta :Q \times \Sigma \longrightarrow Q$ is a **transition function**.
->Language $\mathcal{L}(A)$ recognized by **DFA**  A = {all strings accepted}
+### DFA  
+>$A= (\Sigma, Q, q_{\text{start}}, F, \delta)$
+-  $\Sigma$ is a set of **alphabet**
+- $Q$ is a set of **states**
+- $q_{\text{start}} \in Q$ is a **starting** **state**
+- $F \subseteq Q$ is a set of **accepting** **states**
+- $\delta :Q \times \Sigma \longrightarrow Q$ is a **transition function**.
+- Language $\mathcal{L}(A)$ recognized by **DFA**  $A = \{\text{all strings accepted}\}$
 
+![[DFA|300]]
+- $\overline{L} = \Sigma^{*}-L$
+### NFA 
+>$A= (\Sigma, Q, Q_{\text{start}}, F, \delta)$
+-  $\Sigma$ is a set of **alphabet**
+- $Q$ is a set of **states**
+- $Q_{\text{start}} \subseteq Q$ is a **set of starting states**
+- $F \subseteq Q$ is a set of **accepting** **states**
+- $\delta :Q \times \Sigma \longrightarrow \mathcal{P}( Q)$ is a **transition function**.
+	- $\mathcal{P}(Q)$ : power set of $Q$ = {all subsets of $Q$}
+- Like DFA, **NFA**  $A$ recognizes 
+	- Language $\mathcal{L}(A)=\{\text{strings accepted}\}$
+### RE
+- over $\Sigma$ : 
+	- $\varnothing , \varepsilon, c \: (\text{for any } c \in \Sigma)$ are **RE**s
+	- For all REs $R, S$, 
+		- $(R+S), (RS), R^*$ are **RE**s.
+ - Each **RE** $R$ defines
+	 - Language $\mathcal{L}(R)=\{\text{strings matching R}\}$
+### Formal Definition of Language
+Language $\mathcal{L} \subseteq \Sigma^{*}$ is "regular" 
+- **iff** $L=\mathcal{L}(A)$  for some **DFA**  $A$
+- **iff** $L=\mathcal{L}(A)$ for some **NFA**  $A$
+- **iff** $L=\mathcal{L}(R)$ for some **RE** $R$
+---
+## Non-regularity
+>Ex: $L_{1}=\{a^{n}b^{n}:n\in \mathbb{N}\}$
+- string **"exponent"**:
+	- $\displaystyle a^{n}=\underbrace{aa\cdots a}_{n\text{ copies}}$ 
+	- **NOT** a regular expression!
+- $L_{1}=\{\varepsilon, ab, aabb, aaabbb, \cdots \}$
+	- $\neq \mathcal{L}(a^{*}b^{*}) \because abb \notin L_{1},\: abb \in \mathcal{L}(a^{*}b^{*})$ 
+	- even though $L_{1} \subseteq \mathcal{L}(a^{*}b^{*})$.
+> How do we prove that DFA/NFA for $L_{1}$ does not exist?
+
+To show that $L_{1}$ is **not** regular, find a set of **pairwise distinguishable strings** w.r.t. $L$ s.t.
+- The set is *infinite*. 
+- (Pairwise distinguishable string = each string in set is distinguishable from **all** other strings)
+$$\begin{align}
+\text{Set }\mathcal{D}&=\{\varepsilon, a, aa, aaa, \dots \}  \\[3pt]
+&= \{a^{n}: n \in \mathbb{N}\}  \\[3pt]
+&= \mathcal{L}(a^{*})
+\end{align}$$
+Let $a^{n} \in \mathcal{D}, a^{m} \in \mathcal{D}$ with $m\neq n$.
+- $a^{n}b^{n} \in L_{1}$
+- $a^{m}b^{n} \not\in L_{1} \because m\neq n$
+- Where $b^n$ is a **suffix**
+- So **suffix** $b^n$ distinguishes $a^{n}$ from $a^m$.
+- $\therefore \mathcal{D}$ is **pairwise distinguishable**.
+**Conclusion**: by *Myhill-Nerode Theorem*, **each** DFA for $L_{1}$ has at least $|\mathcal{D}|$ many states.
+- But $|\mathcal{D}|=\infty$
+- $\therefore L_{1}$ has **no** DFA.
+### Example
+> $L_{2}=\{s \in\{a, b\}^{*}: |s|\text{ is a power of 2}\}$
+
+$$\begin{align}
+\text{Set }\mathcal{D} &=\{a, aa, aaaa, \dots \}\\[3pt]
+&= \{a^{2^{n}}: n \in \mathbb{N}\}  
+\end{align}$$
+Let $\displaystyle a^{2^{m}}, a^{2^{n}}$ with $m\neq n$.
+- $\displaystyle a^{2^{n}}a^{2^{n}}=a^{(2^{n} +2^{n)}}=a^{2^{n+1}} \in L_{2}$
+-  $\displaystyle a^{2^{m}}a^{2^{n}}=a^{(2^{m} +2^{n)}}=a^{2^{n+1}} \not\in L_{2}$
+	- $\because 2^{m}+ 2^{n}$ is **not** a power of 2 when $n\neq m$.
