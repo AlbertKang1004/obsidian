@@ -83,17 +83,26 @@ $\varepsilon , a$ are **distinguishable** with respect to $L_{2}$ because there 
 $$
 \varepsilon \cdot b \notin L_{2}, \: a \cdot b \in L_{2}
 $$
-> **Consequence**: $\varepsilon$ and $a$ must end in different states!
+> **Consequence**: $\varepsilon$ and $a$ must end in different states! (so that a common suffix will lead to a different outcome)
 
 ![[DFA 0]]
+Then, we can consider three cases which $b$ can have.
+![[DFA 5|80%]]
 $$\begin{align}
 \varepsilon &: \varepsilon \cdot a, \varepsilon \cdot b, \varepsilon \cdot aa, \cdots \\[3pt]
 b&: b \cdot a, b \cdot b, b \cdot aa, \cdots 
 \end{align}$$
+> $\varepsilon \cdot s$, $b \cdot s$ are both in $L_{2}$ or not in $L_{2}$, so they are **indistinguishable** with respect to $L_{2}$.
+
+Which means $\varepsilon$ and $b$ will end up in same state.
+- First DFA is correct.
+- Third DFA can work, but it will require more states then required.
+
 ![[DFA 1]]
 In $q_{1}$,  reading $a$?
 current `str`: $a\notin L_{2}$
 new `str`: $aa \in L_{2}$
+- New state is needed, and it should be an **accepting** state.
 
 ![[DFA 2]]
 $q_{1}$ read $b$
@@ -102,8 +111,8 @@ $q_{1}$ read $b$
 If $ab$ goes to 
 - $q_{2}: aa \cdot a \in L_{2}$
 - $q_{2}: ab \cdot a \notin L_{2}$
-- Note $aa$ and $ab$ is **distinguishable**
-$\therefore$ in $q_{1}$, reading $b$ needs new state
+Note $aa$ and $ab$ is **distinguishable**.
+- $\therefore$ in $q_{1}$, reading $b$ needs new state
 
 ![[DFA 3]]
 $\therefore a, aba$ are indistinguishable
@@ -131,13 +140,13 @@ $$L_{2} = \{s \in \{a,b\}^{*}: \text{2nd-last char of } s=a\}$$
 ----
 > **Definition**: A set of strings $S \subseteq \Sigma^*$
 
-($S=\{s_{1}, s_{2}, \cdots\}$) is **pairwise distinguishable** with respect to $L$ iff $\forall i \neq j, s_{i} , s_{j}$ are distinguishable w.r.t. $L$.
+($S=\{s_{1}, s_{2}, \cdots\}$) is **pairwise distinguishable** with respect to $L$ iff $\forall i \neq j, s_{i} , s_{j}$ are **distinguishable** w.r.t. $L$.
 - Example: $\{ba,bb\}$ is pairwise distinguishable w.r.t. $L_{2}$.
 - $\{ba,bb,aa\}$ is pairwise distinguishable w.r.t. $L_{2}$.
 - Is $aa,ba$ distinguishable? Yes: suffix = $\varepsilon$
 	- ($aa\in L_{2}, ba \notin L_{2}$)
 - same for $aa, bb$
-
+- Basically, **pairwise distinguishable** = every pair in the set is **distinguishable**.
 > **Claim**: Every DFA for $L_{2}$ must have at least 3 states.
 
 ***Proof.***
@@ -147,7 +156,7 @@ $s_{1}, s_{2}$ are distinguishable. Let $t$ witness this:
 - $s_{1}t \in L_{2},$
 - $s_{2}t \notin L_{2}$ (or other way around)
 In DFA, 
-	- $s_{1}t$ ends in **accepting** state
+	-  $s_{1}t$ ends in **accepting** state
 	- $s_{2}t$ ends in **rejecting** state
 	- $\therefore s_{1}, s_{2}$ must end at different states.
 - $\therefore$ each DFA for $L_{2}$ needs at least as many states as there are strings in $\{aa,ba,bb\}$.
@@ -168,6 +177,18 @@ $$(a+b)^{*}a(a+b)$$
 ![[DFA 4]]
 deterministic: $\delta(r_{0}, b) = \{r_{0}\}$
 non-deterministic:
-- $\delta (r_{0},a) = {r_{0},r_{1}}$
+- $\delta (r_{0},a) = \{r_{0},r_{1}\}$
 - $\delta(r_{2}, a)=\{\}$
 **Trace**
+![[NFA 0|600]]
+
+---
+## DFA vs. NFA vs. RE?
+- **DFA**  $= (\Sigma, Q, q_{\text{start}}, F, \delta)$
+	-  $\Sigma$ is a set of **alphabet**
+	- $Q$ is a set of **states**
+	- $q_{\text{start}} \in Q$ is a **starting** **state**
+	- $F \subseteq Q$ is a set of **accepting** **states**
+	- $\delta :Q \times \Sigma \longrightarrow Q$ is a **transition function**.
+>Language $\mathcal{L}(A)$ recognized by **DFA**  A = {all strings accepted}
+
