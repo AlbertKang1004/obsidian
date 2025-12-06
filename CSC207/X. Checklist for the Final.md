@@ -45,8 +45,8 @@
     - [x] Which layer contains each class?
     - [x] How can you identify the role of a class by looking at the code?
 - [x] What is the Clean Architecture Dependency Rule?
-    - [ ] How is it related to the "D" in SOLID?
-- [ ] Which of the SOLID principles are necessarily followed by any program that adheres to Clean Architecture?
+    - [x] How is it related to the "D" in SOLID?
+- [x] Which of the SOLID principles are necessarily followed by any program that adheres to Clean Architecture?
 - [ ] How do you test a Use Case Interactor?
 - [ ] Which classes are "mocked" by a unit test in order to test a Use Case Interactor?
 - [ ] How can we determine which use cases are required in a program based on its user stories?
