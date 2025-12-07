@@ -13,5 +13,5 @@
 ![[Notes 1.png]]
 
 ---
-![[Pasted image 20251206191359.png]]
+![[Notes 2.png|70%]]
 
