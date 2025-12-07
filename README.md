@@ -2,8 +2,6 @@
 ## Courses
 - **CSC207** - Software Design
 - **CSC236** - Introduction to the Theory of Computation
-- **ECO105** - Principles of Economics for Non-specialists
-
 ## Requirements
 >In order to read the notes
 - <a href="https://obsidian.md/plugins?id=obsidian-git">Obsidian</a> (dark mode preferred, as some diagrams are white)
@@ -11,8 +9,12 @@
 - <a href="https://obsidian.md/plugins?id=obsidian-excalidraw-plugin">Excalidraw</a>  : need for displaying diagrams
 - <a href="https://obsidian.md/plugins?id=obsidian-git">Git</a> : need for cloning/updating the repository
 ## Example Notes Showcase
-![Notes 1](github-repo/images/Notes%201.png)
+![Notes 1](images/Notes%201.png)
 
 ---
 ![Notes 2](images/Notes%202.png)
 
+---
+## References / Sources Used
+https://github.com/CSC207-UofT/207-course-notes/tree/master
+https://refactoring.guru/

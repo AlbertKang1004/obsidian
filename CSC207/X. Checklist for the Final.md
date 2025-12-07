@@ -59,7 +59,7 @@
     - [x] Behavioural patterns: Strategy, Observer
     - [x] Structural patterns: Façade, Adapter
 - [x] What are the classes involved in each of the above design patterns and what (if any) is their relationship?
-- [ ] What is an anti-pattern? What might the anti-pattern of each design pattern above look like?
+- [x] What is an anti-pattern? What might the anti-pattern of each design pattern above look like?
 - [ ] What is the difference between a "refactoring technique" and any other modification to a class or program?
 - [ ] Explain how each refactoring technique works (note that most of these are simple edits):
     - [ ] Extract Method
