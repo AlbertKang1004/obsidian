@@ -29,7 +29,7 @@
     - [x] How do you identify code that violates each principle?
     - [x] Why is it useful to follow each of the SOLID principles?
 - [x] What is a user story and who is the target audience?
-- [ ] How can we identify stakeholders in our program?
+- [x] How can we identify stakeholders in our program?
 - [ ] What is an API and how do you use one in Java?
 - [ ] What is JSON and how is it relevant to an API?
 
@@ -47,18 +47,18 @@
 - [x] What is the Clean Architecture Dependency Rule?
     - [x] How is it related to the "D" in SOLID?
 - [x] Which of the SOLID principles are necessarily followed by any program that adheres to Clean Architecture?
-- [ ] How do you test a Use Case Interactor?
-- [ ] Which classes are "mocked" by a unit test in order to test a Use Case Interactor?
-- [ ] How can we determine which use cases are required in a program based on its user stories?
-- [ ] What is the flow of information through the Clean Architecture — how does information get from the user at the keyboard/mouse into the program, get modified, get stored within and outside of the program, and cause the appropriate changes to the User Interface?
+- [x] How do you test a Use Case Interactor?
+- [x] Which classes are "mocked" by a unit test in order to test a Use Case Interactor?
+- [x] How can we determine which use cases are required in a program based on its user stories?
+- [x] What is the flow of information through the Clean Architecture — how does information get from the user at the keyboard/mouse into the program, get modified, get stored within and outside of the program, and cause the appropriate changes to the User Interface?
 ### \[M4\] Design Patterns
 
-- [ ] What is a design pattern?
-- [ ] Each pattern solves a problem. What problem is solved by each of these patterns and how is it solved? 
-    - [ ] Creational patterns: Builder, Factory
-    - [ ] Behavioural patterns: Strategy, Observer
-    - [ ] Structural patterns: Façade, Adapter
-- [ ] What are the classes involved in each of the above design patterns and what (if any) is their relationship?
+- [x] What is a design pattern?
+- [x] Each pattern solves a problem. What problem is solved by each of these patterns and how is it solved? 
+    - [x] Creational patterns: Builder, Factory
+    - [x] Behavioural patterns: Strategy, Observer
+    - [x] Structural patterns: Façade, Adapter
+- [x] What are the classes involved in each of the above design patterns and what (if any) is their relationship?
 - [ ] What is an anti-pattern? What might the anti-pattern of each design pattern above look like?
 - [ ] What is the difference between a "refactoring technique" and any other modification to a class or program?
 - [ ] Explain how each refactoring technique works (note that most of these are simple edits):
@@ -81,4 +81,4 @@
 - [ ] How can we write a regular expression that matches a set of Strings?
 - [ ] How can we find a String that conforms to a given regular expression?
 - [ ] What do we have to do to a regular expression to use it in a Java program?
-- [ ] What are three ways of checking if a String conforms to a regular expression in Java?
+- [x] What are three ways of checking if a String conforms to a regular expression in Java?
