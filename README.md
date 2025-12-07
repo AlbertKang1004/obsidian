@@ -11,8 +11,8 @@
 - <a href="https://obsidian.md/plugins?id=obsidian-excalidraw-plugin">Excalidraw</a>  : need for displaying diagrams
 - <a href="https://obsidian.md/plugins?id=obsidian-git">Git</a> : need for cloning/updating the repository
 ## Example Notes Showcase
-![Notes 1](Notes%201.png)
+![Notes 1](github-repo/images/Notes%201.png)
 
 ---
-![Notes 2](Notes%202.png)
+![Notes 2](images/Notes%202.png)
 
