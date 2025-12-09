@@ -60,25 +60,25 @@
     - [x] Structural patterns: Façade, Adapter
 - [x] What are the classes involved in each of the above design patterns and what (if any) is their relationship?
 - [x] What is an anti-pattern? What might the anti-pattern of each design pattern above look like?
-- [ ] What is the difference between a "refactoring technique" and any other modification to a class or program?
-- [ ] Explain how each refactoring technique works (note that most of these are simple edits):
-    - [ ] Extract Method
-    - [ ] Change Method Declaration
-    - [ ] Encapsulate Fields
-    - [ ] Split Loop
-    - [ ] Slide Statements
-    - [ ] Replace Constructor with Builder
-    - [ ] Replace Constructor with Factory Method
-- [ ] Which design patterns are built into Clean Architecture? In other words, if you implement Clean Architecture, which design patterns will necessarily appear in your code?
+- [x] What is the difference between a "refactoring technique" and any other modification to a class or program?
+- [x] Explain how each refactoring technique works (note that most of these are simple edits):
+    - [x] Extract Method
+    - [x] Change Method Declaration
+    - [x] Encapsulate Fields
+    - [x] Split Loop
+    - [x] Slide Statements
+    - [x] Replace Constructor with Builder
+    - [x] Replace Constructor with Factory Method
+- [x] Which design patterns are built into Clean Architecture? In other words, if you implement Clean Architecture, which design patterns will necessarily appear in your code?
 ### [M5] Ethics and Regex
 
-- [ ] What is a speech act?
-- [ ] What is the difference between material and relational harm?
-    - [ ] How can you identify each?
-- [ ] What are the similarities and differences between the medical and social models of disability?
-- [ ] Why and how can we use the Principles of Universal Design when designing software?
-- [ ] What are the basic regular expression (regex) symbols that we covered in the reading and/or in lecture?
-- [ ] How can we write a regular expression that matches a set of Strings?
-- [ ] How can we find a String that conforms to a given regular expression?
-- [ ] What do we have to do to a regular expression to use it in a Java program?
+- [x] What is a speech act?
+- [x] What is the difference between material and relational harm?
+    - [x] How can you identify each?
+- [x] What are the similarities and differences between the medical and social models of disability?
+- [x] Why and how can we use the Principles of Universal Design when designing software?
+- [x] What are the basic regular expression (regex) symbols that we covered in the reading and/or in lecture?
+- [x] How can we write a regular expression that matches a set of Strings?
+- [x] How can we find a String that conforms to a given regular expression?
+- [x] What do we have to do to a regular expression to use it in a Java program?
 - [x] What are three ways of checking if a String conforms to a regular expression in Java?
